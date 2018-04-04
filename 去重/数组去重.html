@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>数组去重</title>
+</head>
+
+<body>
+  <script>
+    // 基本类型去重
+    function unique(arr) {
+      return arr.filter((item, index) => {
+        return arr.indexOf(item) === index
+      })
+    }
+    let arr = [1, 2, 2, 2, 5, 3, 1, 7]
+    console.log(unique(arr))
+
+    // 基本+复杂类型去重
+    function unique(arr) {
+      var hash = {};
+      return arr.filter(function (element) {
+        if (hash.hasOwnProperty(element)) {
+          return false;
+        }
+        hash[element] = true;
+        return true;
+      });
+    }
+    let arr1 = [1, 2, { 'a': 3 }, 2, { 'a': 3 }, 3, 'chongfu', '我是重复的', '我是重复的']
+    console.log(unique(arr1))
+  </script>
+</body>
+
+</html>
