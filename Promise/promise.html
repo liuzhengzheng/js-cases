@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Promise</title>
+</head>
+
+<body>
+  <script>
+    console.log('start')
+    new Promise(resolve => {
+      setTimeout(() => {
+        resolve('hello')
+      }, 1000)
+    })
+      .then(value => {
+        console.log(value)
+        return new Promise(resolve => {
+          setTimeout(function () {
+            resolve('world');
+          }, 1000);
+        })
+      })
+      .then(value => {
+        console.log(value)
+      })
+    // 错误处理
+    new Promise(resolve => {
+      setTimeout(() => {
+        resolve()
+      }, 1000)
+    })
+      .then(value => {
+        throw new Error('bye')
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  </script>
+</body>
+
+</html>
