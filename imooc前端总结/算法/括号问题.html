@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+</head>
+
+<body>
+
+    <script>
+        function make(list, left, right, buffer) {
+            if (left < 0 || right < left) {
+                return
+            }
+            if (left === 0 && right === 0) {
+                list.push(buffer)
+                console.log(buffer)
+            } else {
+                if (left > 0) {
+                    buffer = buffer.concat('(')
+                    make(list, left - 1, right, buffer)
+                }
+                if (right > left) {
+                    buffer = buffer.concat(')')
+                    make(list, left, right - 1, buffer)
+                }
+            }
+        }
+        function gen(n) {
+            let buffer = ''
+            let list = []
+            make(list, n, n, buffer)
+            console.log(list)
+        }
+        gen(3)
+    </script>
+</body>
+
+</html>

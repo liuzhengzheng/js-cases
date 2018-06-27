@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <style media="screen">
+        html * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .float,
+        .absolute,
+        .flexbox,
+        .table {
+            margin-bottom: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <section class="float">
+        <style>
+            html * {
+                padding: 0;
+                margin: 0;
+            }
+
+            .float div {}
+
+            .float .left {
+                background-color: red;
+                width: 300px;
+                float: left;
+            }
+
+            .float .center {
+                background-color: green;
+            }
+
+            .float .right {
+                background-color: yellow;
+                width: 300px;
+                float: right;
+            }
+        </style>
+        <div class="left">1</div>
+        <div class="right">3</div>
+        <div class="center">
+            1.这是三栏布局的浮动解决方案； 2.这是三栏布局的浮动解决方案； 3.这是三栏布局的浮动解决方案； 4.这是三栏布局的浮动解决方案； 5.这是三栏布局的浮动解决方案； 6.这是三栏布局的浮动解决方案；
+        </div>
+    </section>
+    <section class="absolute">
+        <style>
+            .absolute {
+                position: relative
+            }
+
+            .absolute div {
+                position: absolute;
+            }
+
+            .absolute .left {
+                background-color: red;
+                width: 300px;
+                left: 0;
+            }
+
+            .absolute .center {
+                background-color: green;
+                left: 300px;
+                right: 300px;
+            }
+
+            .absolute .right {
+                background-color: yellow;
+                width: 300px;
+                right: 0;
+            }
+        </style>
+        <div class="left">1</div>
+        <div class="center">
+            1.这是三栏布局的浮动解决方案； 2.这是三栏布局的浮动解决方案； 3.这是三栏布局的浮动解决方案； 4.这是三栏布局的浮动解决方案； 5.这是三栏布局的浮动解决方案； 6.这是三栏布局的浮动解决方案；
+        </div>
+        <div class="right">3</div>
+    </section>
+    <section class="flexbox">
+        <style>
+            .flexbox {
+                display: flex;
+                margin-top: 100px;
+            }
+
+
+            .flexbox .left {
+                background-color: red;
+                width: 300px;
+            }
+
+            .flexbox .center {
+                background-color: green;
+                flex: 1
+            }
+
+            .flexbox .right {
+                background-color: yellow;
+                width: 300px;
+            }
+        </style>
+        <div class="left">1</div>
+        <div class="center">
+            1.这是三栏布局的； 2.这是三栏布局的浮动解决方案； 3.这是三栏布局的浮动解决方案； 4.这是三栏布局的浮动解决方案； 5.这是三栏布局的浮动解决方案； 6.这是三栏布局的浮动解决方案；
+        </div>
+        <div class="right">3</div>
+    </section>
+    <section class="table">
+        <style>
+            .table {
+                display: table;
+                margin-top: 100px;
+            }
+
+            .table div {
+                display: table-cell;
+            }
+
+            .table .left {
+                background-color: red;
+                width: 300px;
+            }
+
+            .table .center {
+                background-color: green;
+            }
+
+            .table .right {
+                background-color: yellow;
+                width: 300px;
+            }
+        </style>
+        <div class="left">1</div>
+        <div class="center">
+            1.这是三栏布局的； 2.这是三栏布局的浮动解决方案； 3.这是三栏布局的浮动解决方案； 4.这是三栏布局的浮动解决方案； 5.这是三栏布局的浮动解决方案； 6.这是三栏布局的浮动解决方案；
+        </div>
+        <div class="right">3</div>
+    </section>
+    <section class="grid">
+        <style>
+            .grid {
+                margin-top: 100px;
+                display: grid;
+                grid-template-rows: 100px;
+                grid-template-columns: 300px auto 300px;
+            }
+
+
+            .grid .left {
+                background-color: red;
+            }
+
+            .grid .center {
+                background-color: green;
+            }
+
+            .grid .right {
+                background-color: yellow;
+            }
+        </style>
+        <div class="left">1</div>
+        <div class="center">
+            1.这是三栏布局的； 2.这是三栏布局的浮动解决方案； 3.这是三栏布局的浮动解决方案； 4.这是三栏布局的浮动解决方案； 5.这是三栏布局的浮动解决方案； 6.这是三栏布局的浮动解决方案；
+        </div>
+        <div class="right">3</div>
+    </section>
+    <script type="text/javascript">
+        let p = new Promise(function (resolve, reject) {
+            let i = 5
+            if (i > 0) {
+                resolve()
+            } else {
+                reject()
+            }
+        })
+            .then(() => {
+                console.log('success')
+            }).catch(() => {
+                console.log('failed')
+            })
+
+
+
+        // setTimeout(function () {
+        //     console.log(1)
+        // }, 0)
+        // new Promise(function executor(resolve) {
+        //     console.log(2)
+        //     for (var i = 0; i < 10000; i++) {
+        //         i == 9999 && resolve()
+        //     }
+        //     console.log(3)
+        // }).then(function () {
+        //     console.log(4)
+        // })
+        // console.log(5)
+
+    </script>
+</body>
+
+</html>

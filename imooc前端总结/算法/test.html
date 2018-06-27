@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test" class="red blue">你好</div>
+    <script>
+        // 原生实现addclass功能
+        function addclass(obj, className) {
+            obj.className = obj.className ? obj.className.concat(` ${className}`) : ''
+        }
+        function removeclass(obj, className) {
+            let temp = obj.className.split(' ')
+            obj.className = temp.splice(temp.indexOf(className), 1).join(' ')
+        }
+        // addclass(document.getElementById('test'), 'blue')
+        removeclass(document.getElementById('test'), 'red')
+    </script>
+</body>
+
+</html>

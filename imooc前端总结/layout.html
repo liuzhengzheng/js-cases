@@ -1,0 +1,225 @@
+<!-- 
+  题目：假设高度已知，请写出三栏布局，其中左右宽度各300px，中间自适应
+  浮动、绝对定位、flexbox、表格布局、网格布局
+  1、每个解决方案优缺点
+  2、他们之间的比较，区别，缺点和优点
+  浮动：
+  脱离文档流，清除浮动问题
+  兼容性比较好
+  绝对：
+  快捷，不容易出问题
+  布局脱离文档流，导致子元素也得脱离文档流，可使用性比较差
+  flexbox：
+  完美，css3为了解决上面两种缺点而出现
+  表格布局：
+  三个单元格高度会同时变化
+  兼容性非常好
+  网格布局：
+
+  3、如果把高度去掉，考虑纵向，哪个方案不再适用了（兼容性）
+  flex布局和表格布局通用，其他不能使用
+  （浮动左右超出，左侧没有float元素，就超出了
+  绝对定位脱离文档流覆盖别的内容了，没有把盒子撑开，
+  网格布局高度固定，没有撑开）
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Layout</title>
+  <style media="screen">
+    html * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .layout article div {
+      min-height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <!--浮动布局  -->
+  <section class="layout float">
+    <style media="screen">
+      .layout.float .left {
+        float: left;
+        width: 300px;
+        background: red;
+      }
+
+      .layout.float .center {
+        background: yellow;
+      }
+
+      .layout.float .right {
+        float: right;
+        width: 300px;
+        background: blue;
+      }
+    </style>
+    <h1>三栏布局</h1>
+    <article class="left-right-center">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="center">
+        <h2>浮动解决方案</h2>
+        1.这是三栏布局的浮动解决方案； 2.这是三栏布局的浮动解决方案； 3.这是三栏布局的浮动解决方案； 4.这是三栏布局的浮动解决方案； 5.这是三栏布局的浮动解决方案； 6.这是三栏布局的浮动解决方案；
+      </div>
+    </article>
+  </section>
+
+  <!-- 绝对布局 -->
+  <section class="layout absolute">
+    <style>
+      .layout.absolute .left-center-right>div {
+        position: absolute;
+      }
+
+      .layout.absolute .left {
+        left: 0;
+        width: 300px;
+        background: red;
+      }
+
+      .layout.absolute .center {
+        left: 300px;
+        right: 300px;
+        background: yellow;
+      }
+
+      .layout.absolute .right {
+        right: 0;
+        width: 300px;
+        background: blue;
+      }
+    </style>
+    <h1>三栏布局</h1>
+    <article class="left-center-right">
+      <div class="left"></div>
+      <div class="center">
+        <h2>绝对定位解决方案</h2>
+        1.这是三栏布局的浮动解决方案； 2.这是三栏布局的浮动解决方案； 3.这是三栏布局的浮动解决方案； 4.这是三栏布局的浮动解决方案； 5.这是三栏布局的浮动解决方案； 6.这是三栏布局的浮动解决方案；
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+
+
+  <!-- flexbox布局 -->
+  <section class="layout flexbox">
+    <style>
+      .layout.flexbox {
+        margin-top: 110px;
+      }
+
+      .layout.flexbox .left-center-right {
+        display: flex;
+      }
+
+      .layout.flexbox .left {
+        width: 300px;
+        background: red;
+      }
+
+      .layout.flexbox .center {
+        flex: 1;
+        background: yellow;
+      }
+
+      .layout.flexbox .right {
+        width: 300px;
+        background: blue;
+      }
+    </style>
+    <h1>三栏布局</h1>
+    <article class="left-center-right">
+      <div class="left"></div>
+      <div class="center">
+        <h2>flexbox解决方案</h2>
+        1.这是三栏布局的浮动解决方案； 2.这是三栏布局的浮动解决方案； 3.这是三栏布局的浮动解决方案； 4.这是三栏布局的浮动解决方案； 5.这是三栏布局的浮动解决方案； 6.这是三栏布局的浮动解决方案；
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+
+
+  <!-- 表格布局 -->
+  <section class="layout table">
+    <style>
+      .layout.table .left-center-right {
+        width: 100%;
+        height: 100px;
+        display: table;
+      }
+
+      .layout.table .left-center-right>div {
+        display: table-cell;
+      }
+
+      .layout.table .left {
+        width: 300px;
+        background: red;
+      }
+
+      .layout.table .center {
+        background: yellow;
+      }
+
+      .layout.table .right {
+        width: 300px;
+        background: blue;
+      }
+    </style>
+    <h1>三栏布局</h1>
+    <article class="left-center-right">
+      <div class="left"></div>
+      <div class="center">
+        <h2>表格布局解决方案</h2>
+        1.这是三栏布局的浮动解决方案； 2.这是三栏布局的浮动解决方案； 3.这是三栏布局的浮动解决方案； 4.这是三栏布局的浮动解决方案； 5.这是三栏布局的浮动解决方案； 6.这是三栏布局的浮动解决方案；
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+
+  <!-- 网格布局 -->
+  <section class="layout grid">
+    <style>
+      .layout.grid .left-center-right {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 100px;
+        grid-template-columns: 300px auto 300px;
+      }
+
+      .layout.grid .left-center-right>div {}
+
+      .layout.grid .left {
+        background: red;
+      }
+
+      .layout.grid .center {
+        background: yellow;
+      }
+
+      .layout.grid .right {
+
+        background: blue;
+      }
+    </style>
+    <h1>三栏布局</h1>
+    <article class="left-center-right">
+      <div class="left"></div>
+      <div class="center">
+        <h2>网格布局解决方案</h2>
+        1.这是三栏布局的浮动解决方案； 2.这是三栏布局的浮动解决方案； 3.这是三栏布局的浮动解决方案； 4.这是三栏布局的浮动解决方案； 5.这是三栏布局的浮动解决方案； 6.这是三栏布局的浮动解决方案；
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+
+</body>
+
+</html>
