@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <div id="test" class="red blue">你好</div>
+    <div id="test" class="red blue green">你好</div>
     <script>
         // 原生实现addclass功能
         function addclass(obj, className) {
@@ -28,10 +28,12 @@
         }
         function removeclass(obj, className) {
             let temp = obj.className.split(' ')
-            obj.className = temp.splice(temp.indexOf(className), 1).join(' ')
+            temp.splice(temp.indexOf(className), 1).join(' ')
+            obj.className = temp
+            console.log(obj.className)
         }
         // addclass(document.getElementById('test'), 'blue')
-        removeclass(document.getElementById('test'), 'red')
+        removeclass(document.getElementById('test'), 'green')
     </script>
 </body>
 

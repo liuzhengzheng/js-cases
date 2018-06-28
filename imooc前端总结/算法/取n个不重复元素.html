@@ -12,8 +12,9 @@
         // 实现stringify 一个数组取出n个不重复随机元素 (先去重，在取值)
         function getUnique(arr, n) {
             let [...temparr] = arr
-            temarr = new Set(temparr)
+            temarr = Array.from(new Set(temparr))
             let resarr = []
+            console.log(temarr.length)
             for (let i = 0; i < n; i++) {
                 if (temparr.length > 0) {
                     let index = Math.floor(Math.random() * temparr.length)
