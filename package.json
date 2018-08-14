@@ -14,5 +14,8 @@
     "eslint-config-ttdefault": "^1.0.6",
     "eslint-loader": "1.x.x",
     "eslint-plugin-html": "^2.0.1"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2"
   }
 }
