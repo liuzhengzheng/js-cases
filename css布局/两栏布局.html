@@ -13,7 +13,17 @@
         .absolute,
         .flexbox,
         .table {
-            margin-bottom: 10px
+            margin: 50px 0
+        }
+
+        .left {
+            background-color: red;
+            width: 300px;
+            float: left;
+        }
+
+        .right {
+            background-color: green;
         }
     </style>
 </head>
@@ -21,31 +31,14 @@
 <body>
     <section class="float">
         <style>
-            html * {
-                padding: 0;
-                margin: 0;
-            }
-
-
             .float .left {
-                background-color: red;
                 width: 300px;
                 float: left;
             }
-
-            .float .center {
-                background-color: green;
-            }
-
-            .float .right {
-                background-color: yellow;
-                width: 300px;
-                float: right;
-            }
         </style>
-        <div class="left">1</div>
-        <div class="center">
-            1.这是左定宽，右自适应的浮动解决方案； 2.这是左定宽，右自适应的浮动解决方案； 3.这是左定宽，右自适应的浮动解决方案； 4.这是左定宽，右自适应的浮动解决方案； 5.这是左定宽，右自适应的浮动解决方案； 6.这是左定宽，右自适应的浮动解决方案；
+        <div class="left">float</div>
+        <div class="right">
+            1.这是左定宽，右自适应的解决方案； 2.这是左定宽，右自适应的解决方案； 3.这是左定宽，右自适应的解决方案； 4.这是左定宽，右自适应的解决方案； 5.这是左定宽，右自适应的解决方案； 6.这是左定宽，右自适应的解决方案；
         </div>
     </section>
     <section class="absolute">
@@ -59,60 +52,44 @@
             }
 
             .absolute .left {
-                background-color: red;
                 width: 300px;
                 left: 0;
             }
 
-            .absolute .center {
-                background-color: green;
+            .absolute .right {
                 left: 300px;
             }
-
-            .absolute .right {
-                background-color: yellow;
-                width: 300px;
-                right: 0;
-            }
         </style>
-        <div class="left">1</div>
-        <div class="center">
-            1.这是左定宽，右自适应的浮动解决方案； 2.这是左定宽，右自适应的浮动解决方案； 3.这是左定宽，右自适应的浮动解决方案； 4.这是左定宽，右自适应的浮动解决方案； 5.这是左定宽，右自适应的浮动解决方案； 6.这是左定宽，右自适应的浮动解决方案；
+        <div class="left">absolute</div>
+        <div class="right">
+            1.这是左定宽，右自适应的解决方案； 2.这是左定宽，右自适应的解决方案； 3.这是左定宽，右自适应的解决方案； 4.这是左定宽，右自适应的解决方案； 5.这是左定宽，右自适应的解决方案； 6.这是左定宽，右自适应的解决方案；
         </div>
     </section>
     <section class="flexbox">
         <style>
             .flexbox {
                 display: flex;
-                margin-top: 100px;
+                margin-top: 200px;
             }
 
 
             .flexbox .left {
-                background-color: red;
                 width: 300px;
-            }
-
-            .flexbox .center {
-                background-color: green;
-                flex: 1
             }
 
             .flexbox .right {
-                background-color: yellow;
-                width: 300px;
+                flex: 1
             }
         </style>
-        <div class="left">1</div>
-        <div class="center">
-            1.这是左定宽，右自适应的； 2.这是左定宽，右自适应的浮动解决方案； 3.这是左定宽，右自适应的浮动解决方案； 4.这是左定宽，右自适应的浮动解决方案； 5.这是左定宽，右自适应的浮动解决方案； 6.这是左定宽，右自适应的浮动解决方案；
+        <div class="left">flex</div>
+        <div class="right">
+            1.这是左定宽，右自适应的； 2.这是左定宽，右自适应的解决方案； 3.这是左定宽，右自适应的解决方案； 4.这是左定宽，右自适应的解决方案； 5.这是左定宽，右自适应的解决方案； 6.这是左定宽，右自适应的解决方案；
         </div>
     </section>
     <section class="table">
         <style>
             .table {
                 display: table;
-                margin-top: 100px;
             }
 
             .table div {
@@ -120,49 +97,25 @@
             }
 
             .table .left {
-                background-color: red;
-                width: 300px;
-            }
-
-            .table .center {
-                background-color: green;
-            }
-
-            .table .right {
-                background-color: yellow;
                 width: 300px;
             }
         </style>
-        <div class="left">1</div>
-        <div class="center">
-            1.这是左定宽，右自适应的； 2.这是左定宽，右自适应的浮动解决方案； 3.这是左定宽，右自适应的浮动解决方案； 4.这是左定宽，右自适应的浮动解决方案； 5.这是左定宽，右自适应的浮动解决方案； 6.这是左定宽，右自适应的浮动解决方案；
+        <div class="left">table</div>
+        <div class="right">
+            1.这是左定宽，右自适应的； 2.这是左定宽，右自适应的解决方案； 3.这是左定宽，右自适应的解决方案； 4.这是左定宽，右自适应的解决方案； 5.这是左定宽，右自适应的解决方案； 6.这是左定宽，右自适应的解决方案；
         </div>
     </section>
     <section class="grid">
         <style>
             .grid {
-                margin-top: 100px;
                 display: grid;
                 grid-template-rows: 100px;
                 grid-template-columns: 300px auto;
             }
-
-
-            .grid .left {
-                background-color: red;
-            }
-
-            .grid .center {
-                background-color: green;
-            }
-
-            .grid .right {
-                background-color: yellow;
-            }
         </style>
-        <div class="left">1</div>
-        <div class="center">
-            1.这是左定宽，右自适应的； 2.这是左定宽，右自适应的浮动解决方案； 3.这是左定宽，右自适应的浮动解决方案； 4.这是左定宽，右自适应的浮动解决方案； 5.这是左定宽，右自适应的浮动解决方案； 6.这是左定宽，右自适应的浮动解决方案；
+        <div class="left">grid</div>
+        <div class="right">
+            1.这是左定宽，右自适应的； 2.这是左定宽，右自适应的解决方案； 3.这是左定宽，右自适应的解决方案； 4.这是左定宽，右自适应的解决方案； 5.这是左定宽，右自适应的解决方案； 6.这是左定宽，右自适应的解决方案；
         </div>
     </section>
 </body>

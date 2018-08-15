@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+</head>
+
+<body>
+  <script>
+    let var1 = {
+      a: 1,
+      b: {
+        b1: 5,
+        b2: undefined,
+        b3: function () {
+          console.log('xxx')
+        }
+      }
+    }
+    var1.c = var1.b
+    var1.b.c = var1.c
+    let var2 = { ...var1, b: { b1: 6, b2: 7, b3: 8 } }
+    console.log(var1.b)
+    console.log(var2.b)
+  </script>
+</body>
+
+</html>
