@@ -23,7 +23,34 @@
     <div id="test" class="red blue">你好</div>
     <script src="../jquery.js"></script>
     <script>
-
+        let arr2 = []
+        function sign(person) {
+            // 如果迟到
+            if (person.time < now) {
+                if (now - person.time <= 15) {
+                    person.num = person.num + 2
+                } else if (15 < now - person.time <= 30) {
+                    person.num = person.num + 3
+                } else if (now - person.time > 30) {
+                    person.num = person.num + 5
+                }
+            }
+            arr2.push(person)
+            arr2.sort(function (a, b) {
+                return b.num - a.num
+            })
+            return arr2
+        }
+        function callNum() {
+            if (arr2.length === 0) {
+                return 'end'
+            }
+            //取arr2最前面的号
+            let number = arr2[0].numDefault
+            //删除最前面的患者
+            arr2.splice(0, 1)
+            return number
+        }
     </script>
 </body>
 

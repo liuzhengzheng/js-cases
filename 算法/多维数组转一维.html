@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>test</title>
+</head>
+
+<body>
+  <script>
+    // 常规方法：递归
+    function toArray(arr) {
+      let result = []
+      for (let i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+          result.push(...toArray(arr[i]))
+        } else {
+          result.push(arr[i])
+        }
+      }
+      return result
+    }
+    var a = [1, 2, 3, 4, [5, 6, 7, [8, 9, 0]], [1], [2]]
+    a = toArray(a)
+    console.log(a)
+    // 方法一: 使用join()
+    // join() 方法用于把数组中的所有元素放入一个字符串，split() 方法用于把一个字符串分割成字符串数组。
+    var a = [1, 2, 3, 4, [5, 6, 7, [8, 9, 0]], [1], [2]]
+    a = a.join(",").split(",").map(Number)
+    console.log(a)
+
+    // 方法二: 使用toString()
+    // toString() 方法可把一个逻辑值转换为字符串，并返回结果。
+    var a = [1, 2, 3, 4, [5, 6, 7, [8, 9, 0]], [1], [2]]
+    a = a.toString().split(",").map(Number)
+    console.log(a)
+
+    // 方法三: 空字符串
+    var a = [1, 2, 3, 4, [5, 6, 7, [8, 9, 0]], [1], [2]]
+    a = (a + '').split(',').map(Number)
+    console.log(a)
+
+
+    var a = [{ a: 1 }, undefined, null, 4, ['', 6, 7, [8, 9, 0]], [1], [2]]
+    a = toArray(a)
+    console.log(a)
+    // 方法一: 使用join()
+    // join() 方法用于把数组中的所有元素放入一个字符串，split() 方法用于把一个字符串分割成字符串数组。
+    var a = [{ a: 1 }, undefined, null, 4, ['', 6, 7, [8, 9, 0]], [1], [2]]
+    a = a.join(",").split(",")
+    console.log(a)
+
+    // 方法二: 使用toString()
+    // toString() 方法可把一个逻辑值转换为字符串，并返回结果。
+    var a = [{ a: 1 }, undefined, null, 4, ['', 6, 7, [8, 9, 0]], [1], [2]]
+    a = a.toString().split(",")
+    console.log(a)
+
+    // 方法三: 空字符串
+    var a = [{ a: 1 }, undefined, null, 4, ['', 6, 7, [8, 9, 0]], [1], [2]]
+    a = (a + '').split(',')
+    console.log(a)
+  </script>
+</body>
+
+</html>

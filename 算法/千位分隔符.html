@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>test</title>
+</head>
+
+<body>
+  <script>
+    // function splitTest(number) {
+    //   return number.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1,')
+    // }
+    function splitTest(number) {
+      let arr = number.toString().split('')
+      for (let i = arr.length - 3; i > 0; i = i - 3) {
+        console.log(i)
+        arr.splice(i, 0, ',')
+      }
+      console.log(arr)
+      return arr.join('')
+    }
+    console.log(splitTest(50000000000))
+  </script>
+</body>
+
+</html>

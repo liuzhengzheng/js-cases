@@ -5,19 +5,18 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>test</title>
+  <style>
+    .test {
+      background: #000;
+      width: 50vw;
+      height: 50vh
+    }
+  </style>
 </head>
 
 <body>
-  <script>
-    function f() { console.log('I am outside!'); }
-
-    (function () {
-      function f() { console.log('I am inside!'); }
-      if (false) {
-      }
-      f();
-    }());
-  </script>
+  <div class="test">
+  </div>
 </body>
 
 </html>

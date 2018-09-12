@@ -12,14 +12,14 @@
         .float,
         .absolute,
         .flexbox,
-        .table {
-            margin: 50px 0
+        .table,
+        .grid {
+            margin: 50px 0;
         }
 
         .left {
-            background-color: red;
+            background-color: #FF5722;
             width: 300px;
-            float: left;
         }
 
         .right {
@@ -31,8 +31,14 @@
 <body>
     <section class="float">
         <style>
+            .float {
+                overflow: hidden;
+            }
+
             .float .left {
                 width: 300px;
+                /* 该高度需大于右侧内容高度 */
+                /* height: 100px; */
                 float: left;
             }
         </style>
@@ -83,7 +89,7 @@
         </style>
         <div class="left">flex</div>
         <div class="right">
-            1.这是左定宽，右自适应的； 2.这是左定宽，右自适应的解决方案； 3.这是左定宽，右自适应的解决方案； 4.这是左定宽，右自适应的解决方案； 5.这是左定宽，右自适应的解决方案； 6.这是左定宽，右自适应的解决方案；
+            1.这是左定宽，右自适应的解决方案； 2.这是左定宽，右自适应的解决方案； 3.这是左定宽，右自适应的解决方案； 4.这是左定宽，右自适应的解决方案； 5.这是左定宽，右自适应的解决方案； 6.这是左定宽，右自适应的解决方案；
         </div>
     </section>
     <section class="table">
@@ -102,20 +108,20 @@
         </style>
         <div class="left">table</div>
         <div class="right">
-            1.这是左定宽，右自适应的； 2.这是左定宽，右自适应的解决方案； 3.这是左定宽，右自适应的解决方案； 4.这是左定宽，右自适应的解决方案； 5.这是左定宽，右自适应的解决方案； 6.这是左定宽，右自适应的解决方案；
+            1.这是左定宽，右自适应的解决方案； 2.这是左定宽，右自适应的解决方案； 3.这是左定宽，右自适应的解决方案； 4.这是左定宽，右自适应的解决方案； 5.这是左定宽，右自适应的解决方案； 6.这是左定宽，右自适应的解决方案；
         </div>
     </section>
     <section class="grid">
         <style>
             .grid {
                 display: grid;
-                grid-template-rows: 100px;
+                grid-template-rows: 100%;
                 grid-template-columns: 300px auto;
             }
         </style>
         <div class="left">grid</div>
         <div class="right">
-            1.这是左定宽，右自适应的； 2.这是左定宽，右自适应的解决方案； 3.这是左定宽，右自适应的解决方案； 4.这是左定宽，右自适应的解决方案； 5.这是左定宽，右自适应的解决方案； 6.这是左定宽，右自适应的解决方案；
+            1.这是左定宽，右自适应的解决方案； 2.这是左定宽，右自适应的解决方案； 3.这是左定宽，右自适应的解决方案； 4.这是左定宽，右自适应的解决方案； 5.这是左定宽，右自适应的解决方案； 6.这是左定宽，右自适应的解决方案；
         </div>
     </section>
 </body>

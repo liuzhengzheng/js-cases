@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+</head>
+
+<body>
+    <script src="../jquery.js"></script>
+    <script>
+
+
+        Function.prototype.call3 = function (context) {
+            var context = context || window
+            context.fn = this
+            var args = [...arguments].slice(1)
+            var result = context.fn(...args)
+            delete context.fn
+            return result
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        Function.prototype.call2 = function (context) {
+            var context = context || window;
+            context.fn = this;
+            var args = [...arguments].slice(1)
+            var result = context.fn(...args)
+            delete context.fn
+            return result;
+        }
+
+        // 测试一下
+        var value = 2;
+        var obj = {
+            value: 1
+        }
+        function bar(name, age) {
+            return {
+                value: this.value,
+                name: name,
+                age: age
+            }
+        }
+        // bar.call(null); // 2
+
+        console.log(bar.call3(obj, 'xxx', 18));
+    </script>
+</body>
+
+</html>

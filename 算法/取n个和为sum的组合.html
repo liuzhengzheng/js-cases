@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <script>
+    function getGroups(arr, n, sum) {
+      if (n <= 0) {
+        console.log(sum, n)
+        return
+      }
+      if (sum === 0 && n === 0) {
+        console.log(sum, n)
+      } else {
+        if (n > 0)
+          for (var i = 0; i < arr.length; i++) {
+            var temp = arr.slice(i + 1, arr.length);
+            // list = list.concat(arr[i])
+            console.log(sum, arr[i])
+            return getGroups(temp, n - 1, sum - arr[i])
+          }
+      }
+    }
+    getGroups([1, 2, 3, 4, 5], 2, 6)
+  </script>
+</body>
+
+</html>

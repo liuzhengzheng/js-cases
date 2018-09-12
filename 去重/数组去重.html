@@ -29,8 +29,12 @@
         return true;
       });
     }
-    let arr1 = [1, 2, { 'a': 3 }, 2, { 'a': 3 }, 3, 'chongfu', '我是重复的', '我是重复的']
+    let arr1 = [1, 2, { 'a': 3 }, 2, { 'a': 3 }, 3, 'chongfu', '我是重复的', '我是重复的', undefined, undefined]
     console.log(unique(arr1))
+
+    let arr3 = [1, 2, 2, 2, 5, 3, 1, 7]
+    let deduped = [...new Set(arr3)]
+    console.log(deduped)
   </script>
 </body>
 
