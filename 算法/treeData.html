@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>test</title>
+  <style>
+    .red {
+      color: red;
+    }
+
+    .green {
+      color: green;
+    }
+
+    .blue {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div id="test" class="red blue">你好</div> -->
+  <script>
+    const list = [
+      { title: '1', key: '1', parent_key: null },
+      { title: '3-2-1', key: '3-2-1', parent_key: '3-2' },
+      { title: '3-2', key: '3-2', parent_key: '3' },
+      { title: '3', key: '3', parent_key: null },
+      { title: '2', key: '2', parent_key: null },
+      { title: '1-1', key: '1-1', parent_key: '1' },
+      { title: '1-2', key: '1-2', parent_key: '1' },
+      { title: '3-1', key: '3-1', parent_key: '3' },
+    ];
+    let treeData = buildObject(list)
+    console.log(treeData)
+
+    function buildTree(list) {
+      let temp = {};
+      let tree = {};
+      for (let i in list) {
+        temp[list[i].key] = list[i];
+      }
+      for (let i in temp) {
+        if (temp[i].parent_key) {
+          if (!temp[temp[i].parent_key].children) {
+            temp[temp[i].parent_key].children = {};
+          }
+          temp[temp[i].parent_key].children[temp[i].key] = temp[i];
+        } else {
+          tree[temp[i].key] = temp[i];
+        }
+      }
+      // console.log(tree)
+      return tree;
+    }
+    function buildObject(list) {
+      let temp = {};
+      let tree = {};
+      let treeRes = {};
+      // let level = [];
+      for (let i in list) {
+        // level.push(list[i].level)
+        temp[list[i].key] = list[i];
+      }
+      // level = Array.from(new Set(level)).sort((a, b) => a - b)
+
+      for (let i in temp) {
+        if (temp[i].parent_key) {
+          if (!temp[temp[i].parent_key].children) {
+            temp[temp[i].parent_key].children = {};
+          }
+          temp[temp[i].parent_key].children[temp[i].key] = temp[i];
+        } else {
+          tree[temp[i].key] = temp[i];
+        }
+      }
+      treeres = getTree(tree)
+      return treeres;
+    }
+
+    function getTree(obj) {
+      let result = {}
+      result = Object.values(obj)
+      for (let key in result) {
+        if (result[key].children) {
+          result[key].children = getTree(result[key].children)
+        } else {
+          result[key].children = []
+        }
+      }
+      return result
+    }
+
+
+  </script>
+</body>
+
+</html>

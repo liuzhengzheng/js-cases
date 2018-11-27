@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Video.js Test</title>
+  <!-- <script>window.HELP_IMPROVE_VIDEOJS = false;</script> -->
+  <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+
+  <style>
+    /* video.js默认倒序显示时间，也就是视频播放的剩余时间。要显示当前的播放时间，以及总共视频时长，加2行CSS解决： */
+    .video-js .vjs-time-control{display:block;}
+    .video-js .vjs-remaining-time{display: none;}
+
+    /* video.js默认的播放按钮是圆角矩形，想改为为圆形 */
+    .video-js .vjs-big-play-button{
+        font-size: 2.5em;
+        line-height: 2.3em;
+        height: 2.5em;
+        width: 2.5em;
+        -webkit-border-radius: 2.5em;
+        -moz-border-radius: 2.5em;
+        border-radius: 2.5em;
+        background-color: #73859f;
+        background-color: rgba(115,133,159,.5);
+        border-width: 0.15em;
+        margin-top: -1.25em;
+        margin-left: -1.75em;
+    }
+    .vjs-big-play-button .vjs-icon-placeholder {
+        font-size: 1.63em;
+    }
+    .vjs-loading-spinner {
+        font-size: 2.5em;
+        width: 2em;
+        height: 2em;
+        border-radius: 1em;
+        margin-top: -1em;
+        margin-left: -1.5em;
+    }
+  </style>
+</head>
+
+<body>
+  <video id="player" class="video-js vjs-big-play-centered" controls preload="none" width="640" height="264" poster="http://vjs.zencdn.net/v/oceans.png">
+    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+  </video>
+</body>
+
+<script>
+  var videoPlayer = videojs("player")
+  let start = localStorage['videoTime'];
+  videoPlayer.currentTime(start);
+
+  window.onbeforeunload = onbeforeunload_handler;
+  function onbeforeunload_handler() {
+    let time = videoPlayer.currentTime();
+    localStorage.videoTime = time;
+  }
+
+
+</script>
+
+</html>

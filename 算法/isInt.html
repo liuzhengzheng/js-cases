@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>test</title>
+  <style>
+    .red {
+      color: red;
+    }
+
+    .green {
+      color: green;
+    }
+
+    .blue {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="../jquery.js"></script>
+  <script>
+    // 一个最简单的方法是判断除以1的余数是否为0.
+    function isInt(num) {
+      return num % 1 === 0;
+    }
+
+    console.log(isInt(5)); // true
+    console.log(isInt(333)); // true
+    console.log(isInt(10.2)); // false
+    console.log(isInt(0.5)); // false
+
+  </script>
+</body>
+
+</html>

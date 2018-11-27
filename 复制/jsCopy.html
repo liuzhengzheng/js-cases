@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>copy</title>
+</head>
+
+<body>
+  <input type="text" id="copytest" />
+  <input type="button" value="复制" onclick="onCopy()" />
+  <script>
+    function onCopy() {
+      // 获取 input 元素
+      var input = document.querySelector('#copytest');
+      // input.focus();
+      input.select();
+
+      // 执行复制命令
+      document.execCommand('Copy')
+    }
+  </script>
+
+</body>
+
+</html>
