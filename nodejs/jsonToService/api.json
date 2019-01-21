@@ -1,0 +1,352 @@
+[
+  {
+    "name": "公共分类",
+    "desc": "公共分类",
+    "add_time": 1547791410,
+    "up_time": 1547791410,
+    "index": 0,
+    "list": [
+      {
+        "method": "GET",
+        "title": "保存验收单",
+        "path": "/acceptance/save",
+        "res_body_type": "json",
+        "add_time": 1547802158,
+        "up_time": 1547802158,
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": false,
+        "req_body_form": [],
+        "req_body_is_json_schema": false,
+        "req_params": [],
+        "req_headers": [],
+        "req_query": [],
+        "query_path": {
+          "path": "/acceptance/save",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone"
+      },
+      {
+        "method": "POST",
+        "title": "保存验收通知单",
+        "path": "/Acceptance-notice/sace",
+        "res_body_type": "json",
+        "add_time": 1547799333,
+        "up_time": 1547801385,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"buyer_id\":{\"type\":\"string\",\"description\":\"采购员ID\"},\"city\":{\"type\":\"string\",\"description\":\"城市ID\"},\"supplier_id\":{\"type\":\"string\",\"description\":\"供应商ID\"},\"company_id\":{\"type\":\"string\",\"description\":\"公司ID\"},\"contract_number\":{\"type\":\"string\",\"description\":\"合同编号\"},\"order_number\":{\"type\":\"string\",\"description\":\"订单编号\"},\"supplier_order_number\":{\"type\":\"string\",\"description\":\"供应商订单编号\"},\"asset_name\":{\"type\":\"string\",\"description\":\"资产名称\"},\"specification\":{\"type\":\"string\",\"description\":\"规格型号\"},\"asset_type\":{\"type\":\"string\",\"description\":\"资产类型\"},\"asset_class\":{\"type\":\"string\",\"description\":\"资产小类\"},\"expected_date\":{\"type\":\"string\",\"description\":\"预计到货日期\"},\"remained_amount\":{\"type\":\"number\",\"description\":\"合同剩余数量\"},\"arrival_amount\":{\"type\":\"number\",\"description\":\"到货数量\"},\"invoice_type\":{\"type\":\"string\",\"description\":\"发票类型\"},\"tax_rate\":{\"type\":\"string\",\"description\":\"专票税率\"},\"unit_price\":{\"type\":\"number\",\"description\":\"单价\"},\"currency\":{\"type\":\"string\",\"description\":\"币种\"},\"exchange_rate\":{\"type\":\"number\",\"description\":\"汇率\"},\"user_id\":{\"type\":\"string\",\"description\":\"使用人ID\"},\"location\":{\"type\":\"string\",\"description\":\"使用地点\"},\"remarks\":{\"type\":\"string\",\"description\":\"备注\"}},\"required\":[]}",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\n   \"code\": 0,\n   \"message\": \"请求成功！\"\n}",
+        "req_body_type": "json",
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": false,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "value": "application/json",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/Acceptance-notice/sace",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone"
+      },
+      {
+        "method": "GET",
+        "title": "查询SN号信息",
+        "path": "/acceptance/query/detail/SN",
+        "res_body_type": "json",
+        "add_time": 1547804799,
+        "up_time": 1547805265,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\n \"result\": {\n  \"total\": 4,\n  \"list\": [{\n    \"sn_line_number\": \"1\",\n    \"sn_number\": \"DSTSNWSN012M\",\n    \"asset_number\": \"120102910291212\"\n  },\n   {\n    \"sn_line_number\": \"2\",\n    \"sn_number\": \"DSTSNWSN012M\",\n    \"asset_number\": \"120102910291212\"\n   },\n   {\n    \"sn_line_number\": \"3\",\n    \"sn_number\": \"DSTSNWSN012M\",\n    \"asset_number\": \"120102910291212\"\n   },\n   {\n    \"sn_line_number\": \"4\",\n    \"sn_number\": \"DSTSNWSN012M\",\n    \"asset_number\": \"120102910291212\"\n   }\n  ],\n  \"pageNum\": 1,\n  \"pageSize\": 10,\n  \"pages\": 1,\n  \"nextPage\": null,\n  \"isFirstPage\": true,\n  \"isLastPage\": true,\n  \"hasPreviousPage\": false,\n  \"hasNextPage\": false,\n },\n \"code\": 0,\n \"message\": \"请求成功！\"\n}",
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": false,
+        "req_body_form": [],
+        "req_body_is_json_schema": false,
+        "req_params": [],
+        "req_headers": [],
+        "req_query": [
+          {
+            "desc": "",
+            "example": "YS2019010001",
+            "name": "acceptance_number",
+            "required": "1"
+          },
+          {
+            "desc": "",
+            "example": "1",
+            "name": "line_number",
+            "required": "1"
+          }
+        ],
+        "query_path": {
+          "path": "/acceptance/query/detail/SN",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone"
+      },
+      {
+        "method": "GET",
+        "title": "查询合同数据",
+        "path": "/Acceptance-notice/contract-query",
+        "res_body_type": "json",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\n \"result\": {\n  \"total\": 148,\n  \"list\": [{\n    \"buyer_id\": \"zhangxue03\",  \n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_id\":\"10021\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_id\":\"10001\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_id\":  \"zhouxinxin\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n  },\n   {\n    \"buyer_id\": \"zhangxue03\",  \n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_id\":\"10021\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_id\":\"10001\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_id\":  \"zhouxinxin\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"buyer_id\": \"zhangxue03\",  \n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_id\":\"10021\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_id\":\"10001\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_id\":  \"zhouxinxin\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"buyer_id\": \"zhangxue03\",  \n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_id\":\"10021\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_id\":\"10001\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_id\":  \"zhouxinxin\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"buyer_id\": \"zhangxue03\",  \n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_id\":\"10021\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_id\":\"10001\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_id\":  \"zhouxinxin\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"buyer_id\": \"zhangxue03\",  \n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_id\":\"10021\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_id\":\"10001\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_id\":  \"zhouxinxin\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"buyer_id\": \"zhangxue03\",  \n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_id\":\"10021\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_id\":\"10001\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_id\":  \"zhouxinxin\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"buyer_id\": \"zhangxue03\",  \n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_id\":\"10021\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_id\":\"10001\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_id\":  \"zhouxinxin\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"buyer_id\": \"zhangxue03\",  \n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_id\":\"10021\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_id\":\"10001\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_id\":  \"zhouxinxin\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"buyer_id\": \"zhangxue03\",  \n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_id\":\"10021\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_id\":\"10001\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_id\":  \"zhouxinxin\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   }\n  ],\n  \"pageNum\": 1,\n  \"pageSize\": 10,\n  \"pages\": 15,\n  \"nextPage\": 2,\n  \"isFirstPage\": true,\n  \"isLastPage\": false,\n  \"hasPreviousPage\": false,\n  \"hasNextPage\": true,\n },\n \"code\": 0,\n \"message\": \"请求成功！\"\n}",
+        "add_time": 1547801511,
+        "up_time": 1547801959,
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": false,
+        "req_body_form": [],
+        "req_body_is_json_schema": false,
+        "req_params": [],
+        "req_headers": [],
+        "req_query": [
+          {
+            "desc": "",
+            "example": "北京",
+            "name": "city",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "100001",
+            "name": "supplier_id",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "zhangxue03",
+            "name": "buyer_id",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "DJHL-20181119-038",
+            "name": "contract_number",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "10001",
+            "name": "company_id",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "zhouxinxin",
+            "name": "demander",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "1",
+            "name": "page",
+            "required": "1"
+          },
+          {
+            "desc": "",
+            "example": "10",
+            "name": "size",
+            "required": "1"
+          }
+        ],
+        "query_path": {
+          "path": "/Acceptance-notice/contract-query",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone"
+      },
+      {
+        "method": "GET",
+        "title": "查询明细验收单",
+        "path": "/acceptance/query/detail",
+        "res_body_type": "json",
+        "add_time": 1547803511,
+        "up_time": 1547804936,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\n   \"result\": {\n      \"total\": 5,\n      \"list\": [\n         {\n            \"line_number\": \"1\",\n            \"acceptance_notice_number\": \"TZ2019010001\",\n            \"buyer_name\": \"张雪\",\n            \"city\": \"北京\",\n            \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n            \"company_name\": \"北京市达佳信息互联有限公司\",\n            \"contract_number\": \"DJHL-20181119-038\",\n            \"order_number\": \"DJHL-20181119-048\",\n            \"supplier_order_number\": null,\n            \"asset_name\": \"DELL笔记本电脑\",\n            \"specification\": \"Dell Latitude 5290\",\n            \"asset_type\": \" 固定资产\",\n            \"asset_class\": \" 笔记本\",\n            \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n            \"arrival_amount\": \"30\",\n            \"arrivaled_amount\": \"30\",\n            \"invoice_type\": \"增值税专用发票\",\n            \"tax_rate\": \"16%\",\n            \"currency\": \"人民币\",\n            \"exchange_rate\": \"8\",\n            \"user_name\": \"周鑫鑫\",\n            \"user_depart\": \"研发线/效率工程部\",\n            \"location\": \"C座5楼\",\n            \"remarks\": \"验收说明\"\n         },\n         {\n            \"line_number\": \"2\",\n            \"acceptance_notice_number\": \"TZ2019010001\",\n            \"buyer_name\": \"张雪\",\n            \"city\": \"北京\",\n            \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n            \"company_name\": \"北京市达佳信息互联有限公司\",\n            \"contract_number\": \"DJHL-20181119-038\",\n            \"order_number\": \"DJHL-20181119-048\",\n            \"supplier_order_number\": null,\n            \"asset_name\": \"DELL笔记本电脑\",\n            \"specification\": \"Dell Latitude 5290\",\n            \"asset_type\": \" 固定资产\",\n            \"asset_class\": \" 笔记本\",\n            \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n            \"arrival_amount\": \"30\",\n            \"arrivaled_amount\": \"30\",\n            \"invoice_type\": \"增值税专用发票\",\n            \"tax_rate\": \"16%\",\n            \"currency\": \"人民币\",\n            \"exchange_rate\": \"8\",\n            \"user_name\": \"周鑫鑫\",\n            \"user_depart\": \"研发线/效率工程部\",\n            \"location\": \"C座5楼\",\n            \"remarks\": \"验收说明\"\n         },\n         {\n            \"line_number\": \"3\",\n            \"acceptance_notice_number\": \"TZ2019010001\",\n            \"buyer_name\": \"张雪\",\n            \"city\": \"北京\",\n            \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n            \"company_name\": \"北京市达佳信息互联有限公司\",\n            \"contract_number\": \"DJHL-20181119-038\",\n            \"order_number\": \"DJHL-20181119-048\",\n            \"supplier_order_number\": null,\n            \"asset_name\": \"DELL笔记本电脑\",\n            \"specification\": \"Dell Latitude 5290\",\n            \"asset_type\": \" 固定资产\",\n            \"asset_class\": \" 笔记本\",\n            \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n            \"arrival_amount\": \"30\",\n            \"arrivaled_amount\": \"30\",\n            \"invoice_type\": \"增值税专用发票\",\n            \"tax_rate\": \"16%\",\n            \"currency\": \"人民币\",\n            \"exchange_rate\": \"8\",\n            \"user_name\": \"周鑫鑫\",\n            \"user_depart\": \"研发线/效率工程部\",\n            \"location\": \"C座5楼\",\n            \"remarks\": \"验收说明\"\n         },\n         {\n            \"line_number\": \"4\",\n            \"acceptance_notice_number\": \"TZ2019010001\",\n            \"buyer_name\": \"张雪\",\n            \"city\": \"北京\",\n            \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n            \"company_name\": \"北京市达佳信息互联有限公司\",\n            \"contract_number\": \"DJHL-20181119-038\",\n            \"order_number\": \"DJHL-20181119-048\",\n            \"supplier_order_number\": null,\n            \"asset_name\": \"DELL笔记本电脑\",\n            \"specification\": \"Dell Latitude 5290\",\n            \"asset_type\": \" 固定资产\",\n            \"asset_class\": \" 笔记本\",\n            \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n            \"arrival_amount\": \"30\",\n            \"arrivaled_amount\": \"30\",\n            \"invoice_type\": \"增值税专用发票\",\n            \"tax_rate\": \"16%\",\n            \"currency\": \"人民币\",\n            \"exchange_rate\": \"8\",\n            \"user_name\": \"周鑫鑫\",\n            \"user_depart\": \"研发线/效率工程部\",\n            \"location\": \"C座5楼\",\n            \"remarks\": \"验收说明\"\n         },\n         {\n            \"line_number\": \"5\",\n            \"acceptance_notice_number\": \"TZ2019010001\",\n            \"buyer_name\": \"张雪\",\n            \"city\": \"北京\",\n            \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n            \"company_name\": \"北京市达佳信息互联有限公司\",\n            \"contract_number\": \"DJHL-20181119-038\",\n            \"order_number\": \"DJHL-20181119-048\",\n            \"supplier_order_number\": null,\n            \"asset_name\": \"DELL笔记本电脑\",\n            \"specification\": \"Dell Latitude 5290\",\n            \"asset_type\": \" 固定资产\",\n            \"asset_class\": \" 笔记本\",\n            \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n            \"arrival_amount\": \"30\",\n            \"arrivaled_amount\": \"30\",\n            \"invoice_type\": \"增值税专用发票\",\n            \"tax_rate\": \"16%\",\n            \"currency\": \"人民币\",\n            \"exchange_rate\": \"8\",\n            \"user_name\": \"周鑫鑫\",\n            \"user_depart\": \"研发线/效率工程部\",\n            \"location\": \"C座5楼\",\n            \"remarks\": \"验收说明\"\n         }\n      ],\n      \"pageNum\": 1,\n      \"pageSize\": 10,\n      \"pages\": 1,\n      \"nextPage\": null,\n      \"isFirstPage\": true,\n      \"isLastPage\": true,\n      \"hasPreviousPage\": false,\n      \"hasNextPage\": false,\n      \"acceptance_number\": \"YS2019010001\",\n      \"acceptance_person_name\": \"张雪\",\n      \"acceptance_person_dept\": \"研发线/效率工程部\",\n      \"acceptance_date\": \"2019-01-14T23:50:26.000+0000\",\n      \"description\": \"验收说明\"\n   },\n   \"code\": 0,\n   \"message\": \"请求成功！\"\n}",
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": false,
+        "req_body_form": [],
+        "req_body_is_json_schema": false,
+        "req_params": [],
+        "req_headers": [],
+        "req_query": [
+          {
+            "desc": "",
+            "example": "YS2019010001",
+            "name": "acceptance_number",
+            "required": "1"
+          }
+        ],
+        "query_path": {
+          "path": "/acceptance/query/detail",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone"
+      },
+      {
+        "method": "GET",
+        "title": "查询汇总验收单",
+        "path": "/acceptance/query/summary",
+        "res_body_type": "json",
+        "add_time": 1547802989,
+        "up_time": 1547803472,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\n \"result\": {\n  \"total\": 148,\n  \"list\": [{\n    \"acceptance_number\": \"YS2019010001\",\n    \"acceptance_person_name\": \"张雪\",\n    \"acceptance_date\": \"2019-01-14T23:50:26.000+0000\",\n    \"description\": \"验收说明\"\n  },\n   {\n    \"acceptance_number\": \"YS2019010002\",\n    \"acceptance_person_name\": \"张雪\",\n    \"acceptance_date\": \"2019-01-14T23:50:26.000+0000\",\n    \"description\": \"验收说明\"\n   },\n   {\n    \"acceptance_number\": \"YS2019010003\",\n    \"acceptance_person_name\": \"张雪\",\n    \"acceptance_date\": \"2019-01-14T23:50:26.000+0000\",\n    \"description\": \"验收说明\"\n   },\n   {\n    \"acceptance_number\": \"YS2019010004\",\n    \"acceptance_person_name\": \"张雪\",\n    \"acceptance_date\": \"2019-01-14T23:50:26.000+0000\",\n    \"description\": \"验收说明\"\n   },\n   {\n    \"acceptance_number\": \"YS2019010005\",\n    \"acceptance_person_name\": \"张雪\",\n    \"acceptance_date\": \"2019-01-14T23:50:26.000+0000\",\n    \"description\": \"验收说明\"\n   },\n   {\n    \"acceptance_number\": \"YS2019010006\",\n    \"acceptance_person_name\": \"张雪\",\n    \"acceptance_date\": \"2019-01-14T23:50:26.000+0000\",\n    \"description\": \"验收说明\"\n   },\n   {\n    \"acceptance_number\": \"YS2019010007\",\n    \"acceptance_person_name\": \"张雪\",\n    \"acceptance_date\": \"2019-01-14T23:50:26.000+0000\",\n    \"description\": \"验收说明\"\n   },\n   {\n    \"acceptance_number\": \"YS2019010008\",\n    \"acceptance_person_name\": \"张雪\",\n    \"acceptance_date\": \"2019-01-14T23:50:26.000+0000\",\n    \"description\": \"验收说明\"\n   },\n   {\n    \"acceptance_number\": \"YS2019010009\",\n    \"acceptance_person_name\": \"张雪\",\n    \"acceptance_date\": \"2019-01-14T23:50:26.000+0000\",\n    \"description\": \"验收说明\"\n   },\n   {\n    \"acceptance_number\": \"YS2019010010\",\n    \"acceptance_person_name\": \"张雪\",\n    \"acceptance_date\": \"2019-01-14T23:50:26.000+0000\",\n    \"description\": \"验收说明\"\n   }\n  ],\n  \"pageNum\": 1,\n  \"pageSize\": 10,\n  \"pages\": 15,\n  \"nextPage\": 2,\n  \"isFirstPage\": true,\n  \"isLastPage\": false,\n  \"hasPreviousPage\": false,\n  \"hasNextPage\": true,\n },\n \"code\": 0,\n \"message\": \"请求成功！\"\n}",
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": false,
+        "req_body_form": [],
+        "req_body_is_json_schema": false,
+        "req_params": [],
+        "req_headers": [],
+        "req_query": [
+          {
+            "desc": "",
+            "example": "YS2019010001",
+            "name": "acceptance_number",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "zhangxue03",
+            "name": "acceptance_person_id",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "2019-01-14T23:50:26.000+0000",
+            "name": "acceptance_date_from",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "2019-01-14T23:50:26.000+0000",
+            "name": "acceptance_date_to",
+            "required": "0"
+          }
+        ],
+        "query_path": {
+          "path": "/acceptance/query/summary",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone"
+      },
+      {
+        "method": "GET",
+        "title": "查询验收通知单",
+        "path": "/Acceptance-notice/query",
+        "res_body_type": "json",
+        "add_time": 1547792066,
+        "up_time": 1547805045,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\n \"result\": {\n  \"total\": 148,\n  \"list\": [{\n    \"acceptance_notice_number\": \"TZ2019010001\",\n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n  },\n   {\n    \"acceptance_notice_number\": \"TZ2019010002\",\n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"acceptance_notice_number\": \"TZ2019010003\",\n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"acceptance_notice_number\": \"TZ2019010004\",\n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"acceptance_notice_number\": \"TZ2019010005\",\n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"acceptance_notice_number\": \"TZ2019010006\",\n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"acceptance_notice_number\": \"TZ2019010007\",\n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"acceptance_notice_number\": \"TZ2019010008\",\n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"acceptance_notice_number\": \"TZ2019010009\",\n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   },\n   {\n    \"acceptance_notice_number\": \"TZ20190100010\",\n    \"buyer_name\": \"张雪\",\n    \"city\": \"北京\",\n    \"supplier_name\": \"北京市京东世纪贸易有限公司\",\n    \"company_name\": \"北京市达佳信息互联有限公司\",\n    \"contract_number\":\"DJHL-20181119-038\",\n    \"order_number\": \"DJHL-20181119-048\",\n    \"supplier_order_number\": null,\n    \"asset_name\": \"DELL笔记本电脑\",\n    \"specification\": \"Dell Latitude 5290\",\n    \"asset_type\": \" 固定资产\",\n    \"asset_class\": \" 笔记本\",\n    \"expected_date\": \"2019-01-19T23:50:26.000+0000\",\n    \"remained_amount\": \"40\",\n    \"arrival_amount\":  \"30\",\n    \"invoice_type\":  \"增值税专用发票\",\n    \"tax_rate\":  \"16%\",\n    \"currency\":  \"人民币\",\n    \"exchange_rate\":  \"8\",\n    \"user_name\":  \"周鑫鑫\",\n    \"user_depart\":  \"研发线/效率工程部\",\n    \"location\":  \"C座5楼\",\n    \"remarks\":  null\n   }\n  ],\n  \"pageNum\": 1,\n  \"pageSize\": 10,\n  \"pages\": 15,\n  \"nextPage\": 2,\n  \"isFirstPage\": true,\n  \"isLastPage\": false,\n  \"hasPreviousPage\": false,\n  \"hasNextPage\": true,\n },\n \"code\": 0,\n \"message\": \"请求成功！\"\n}",
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": false,
+        "req_body_form": [],
+        "req_body_is_json_schema": false,
+        "req_params": [],
+        "req_headers": [],
+        "req_query": [
+          {
+            "desc": "",
+            "example": "北京",
+            "name": "city",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "100001",
+            "name": "supplier_id",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "zhangxue03",
+            "name": "buyer_id",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "2019-01-14T23:50:26.000+0000",
+            "name": "expected_date_from",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "2019-01-19T23:50:26.000+0000",
+            "name": "expected_date_to",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "DJHL-20181119-038",
+            "name": "contract_number",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "10001",
+            "name": "company_id",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "zhouxinxin",
+            "name": "demander",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "所有",
+            "name": "state_code",
+            "required": "0"
+          },
+          {
+            "desc": "",
+            "example": "1",
+            "name": "page",
+            "required": "1"
+          },
+          {
+            "desc": "",
+            "example": "10",
+            "name": "size",
+            "required": "1"
+          }
+        ],
+        "query_path": {
+          "path": "/Acceptance-notice/query",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone"
+      }
+    ]
+  }
+]
